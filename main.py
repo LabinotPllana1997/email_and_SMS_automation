@@ -1,4 +1,4 @@
-# import os
+import os
 from datetime import date 
 import pandas as pd
 from send_emails import send_email
@@ -26,10 +26,9 @@ def send_sms(to, message):
     Returns:
     - None
     """
-    # account_sid = os.environ.get("account_sid")
-    # auth_token = os.environ.get("auth_token")
-    account_sid = 'AC3b75a7ef1b7b42e2783e54b405d4f7b9'
-    auth_token = 'b7e4ab284d44ba2d8cea1b17104f7287'
+    account_sid = os.environ.get("account_sid")
+    auth_token = os.environ.get("auth_token")
+
     client = Client(account_sid, auth_token)
     
     from_number = "+15732843696"  # Your Twilio phone number
